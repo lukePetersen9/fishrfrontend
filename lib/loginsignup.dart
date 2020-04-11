@@ -1,19 +1,21 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:sample/homepagetabs.dart';
-import 'yourPage.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'user.dart';
 
 class LoginSignUp extends StatefulWidget {
+  LoginSignUp();
   @override
   _LoginSignUpState createState() => _LoginSignUpState();
 }
 
 class _LoginSignUpState extends State<LoginSignUp>
     with SingleTickerProviderStateMixin {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   TabController _tabController;
-  TextEditingController _username, _password;
+  TextEditingController _username, _password, _email;
   bool show = false;
+  String userId = 'hello';
 
   @override
   void initState() {
@@ -21,6 +23,7 @@ class _LoginSignUpState extends State<LoginSignUp>
     _tabController = TabController(vsync: this, length: 2);
     _username = TextEditingController();
     _password = TextEditingController();
+    _email = TextEditingController();
     _tabController.addListener(() {
       setState(() {});
     });
@@ -82,7 +85,7 @@ class _LoginSignUpState extends State<LoginSignUp>
                     Expanded(
                       flex: 4,
                       child: Center(
-                        child: Text('Sign Up'),
+                        child: Text(userId),
                       ),
                     ),
                     Expanded(
@@ -113,6 +116,7 @@ class _LoginSignUpState extends State<LoginSignUp>
                     Expanded(
                       flex: 2,
                       child: TextField(
+                        controller: _email,
                         decoration:
                             InputDecoration.collapsed(hintText: 'email'),
                       ),
@@ -153,13 +157,15 @@ class _LoginSignUpState extends State<LoginSignUp>
                                   return FlatButton(
                                     child: Text('sign up'),
                                     onPressed: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              HomePageTabs(model),
-                                        ),
-                                      );
+                                      signup();
+
+                                      // Navigator.push(
+                                      //   context,
+                                      //   MaterialPageRoute(
+                                      //     builder: (context) =>
+                                      //         HomePageTabs(model),
+                                      //   ),
+                                      // );
                                     },
                                     padding: EdgeInsets.symmetric(
                                         vertical: 15, horizontal: 5),
@@ -179,5 +185,19 @@ class _LoginSignUpState extends State<LoginSignUp>
         ),
       ),
     );
+  }
+
+  void signup() async {
+    final FirebaseUser user = await _auth
+        .createUserWithEmailAndPassword(
+      email: _email.text,
+      password: _password.text,
+    )
+        .then((value) {
+      setState(() {
+        userId = value.user.email;
+      });
+      return value.user;
+    });
   }
 }

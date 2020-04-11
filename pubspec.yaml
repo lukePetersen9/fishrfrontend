@@ -29,7 +29,7 @@ dependencies:
   fluttertoast: ^4.0.1
   path_provider: ^1.6.5
   scoped_model: ^1.0.1
-
+  firebase_auth: ^0.15.5+3
 
 dev_dependencies:
   flutter_test:

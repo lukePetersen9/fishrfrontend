@@ -1,0 +1,325 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:1:1-23:12
+INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:1:1-23:12
+INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:1:1-23:12
+INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:1:1-23:12
+MERGED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:1:1-23:12
+MERGED from [:fluttertoast] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/fluttertoast/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:video_player] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/video_player/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:firebase_auth] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_auth_web] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_auth_web/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:firebase_core] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_core_web] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_core_web/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:path_provider] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:path_provider_macos] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/path_provider_macos/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:image_picker] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-22:12
+MERGED from [:flutter_plugin_android_lifecycle] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/flutter_plugin_android_lifecycle/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:video_player_web] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/video_player_web/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:camera] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:17:1-42:12
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-19.0.0.aar/0734fa91648f14969f623a5a12bc46fe/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/play-services-base-17.1.0.aar/a1eeaf4d1770b8faa1b9b5011378e173/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-19.3.0.aar/bb3c67d97d5babf7c16956f692302147/AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/play-services-tasks-17.0.0.aar/1f1032af2ee2b0b6b6a0a306f4d32c97/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/8cb5094924cf4da7c8c7a38ab316ab86/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/fragment-1.1.0.aar/a1b95b2575b9c4bd0f1b96adab4454e3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/6d05afcb915767e1c0d69597788ca29e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/139ccf1243c7cb6e849e94e9e6fa9fac/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/activity-1.0.0.aar/f62aa49952a3f98786379cce7029fdd9/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/customview-1.0.0.aar/ba118e5874160e1e1b4eba3ce12e2659/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/core-1.1.0.aar/2345324afe3a3bd1b02e378cb1178072/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.2.0.aar/bfd65fd04b67b5e40ee2748ec5bf5251/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/savedstate-1.0.0.aar/debf3d0aa0838a5450eb43bd6c9cbd68/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.0.0.aar/a38e50cefe1458d12d1b169f454e9195/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/6665799a11946c944562f58c94da05dc/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/76144a3eb76a2cd45409d72af06311eb/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.0.aar/53fd94a06422a1698b9ddeb5742cffe1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0.aar/0b6d8c3c961fcb9ba7913f1c8bb7a667/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:16.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-firebase-components-16.0.0.aar/1b11daeb26a61acfbba792da74358278/AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.1.0.aar/ec3d66a6ca865e4e730734f096af2574/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-exoplayer-hls-2.9.6.aar/52c375b963fb8abc1f1e39c9c2da0847/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-exoplayer-dash-2.9.6.aar/65a77a0b009ac75e468307fecd4422ad/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.6] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-exoplayer-smoothstreaming-2.9.6.aar/b2c92dbb148e6ff86358611445e81947/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-exoplayer-core-2.9.6.aar/9dad8e678bab93b7af001272e25502ef/AndroidManifest.xml:17:1-26:12
+INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:1:70-98
+		INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/debug/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:1:1-23:12
+		INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/debug/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:1:1-23:12
+		INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/debug/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:8:5-66
+MERGED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:8:5-66
+MERGED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:8:5-66
+	android:name
+		ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:8:22-64
+application
+ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:9:5-22:19
+MERGED from [:firebase_auth] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_auth] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:image_picker] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-20:19
+MERGED from [:image_picker] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-20:19
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-19.0.0.aar/0734fa91648f14969f623a5a12bc46fe/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-19.0.0.aar/0734fa91648f14969f623a5a12bc46fe/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/play-services-base-17.1.0.aar/a1eeaf4d1770b8faa1b9b5011378e173/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/play-services-base-17.1.0.aar/a1eeaf4d1770b8faa1b9b5011378e173/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-19.3.0.aar/bb3c67d97d5babf7c16956f692302147/AndroidManifest.xml:25:5-37:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-19.3.0.aar/bb3c67d97d5babf7c16956f692302147/AndroidManifest.xml:25:5-37:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/play-services-tasks-17.0.0.aar/1f1032af2ee2b0b6b6a0a306f4d32c97/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/play-services-tasks-17.0.0.aar/1f1032af2ee2b0b6b6a0a306f4d32c97/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/8cb5094924cf4da7c8c7a38ab316ab86/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/8cb5094924cf4da7c8c7a38ab316ab86/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/core-1.1.0.aar/2345324afe3a3bd1b02e378cb1178072/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/core-1.1.0.aar/2345324afe3a3bd1b02e378cb1178072/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.0.aar/53fd94a06422a1698b9ddeb5742cffe1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.0.aar/53fd94a06422a1698b9ddeb5742cffe1/AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/core-1.1.0.aar/2345324afe3a3bd1b02e378cb1178072/AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:9:67-89
+	android:icon
+		ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:9:90-124
+	android:name
+		ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:9:18-66
+activity#com.example.sample.MainActivity
+ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:11:9-21:20
+	android:launchMode
+		ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:11:48-78
+	android:hardwareAccelerated
+		ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:11:246-280
+	android:windowSoftInputMode
+		ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:11:281-323
+	android:configChanges
+		ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:11:114-245
+	android:theme
+		ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:11:79-113
+	android:name
+		ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:11:19-47
+meta-data#io.flutter.app.android.SplashScreenUntilFirstFrame
+ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:16:13-113
+	android:value
+		ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:16:90-110
+	android:name
+		ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:16:24-89
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:17:13-20:29
+action#android.intent.action.MAIN
+ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:18:17-68
+	android:name
+		ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:18:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:19:17-76
+	android:name
+		ADDED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml:19:27-74
+uses-sdk
+INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml
+MERGED from [:fluttertoast] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/fluttertoast/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/fluttertoast/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:video_player] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/video_player/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:video_player] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/video_player/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth_web] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_auth_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth_web] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_auth_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core_web] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_core_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core_web] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_core_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_macos] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/path_provider_macos/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_macos] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/path_provider_macos/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:image_picker] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:image_picker] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_plugin_android_lifecycle] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/flutter_plugin_android_lifecycle/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_plugin_android_lifecycle] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/flutter_plugin_android_lifecycle/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:video_player_web] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/video_player_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:video_player_web] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/video_player_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:camera] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:camera] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-19.0.0.aar/0734fa91648f14969f623a5a12bc46fe/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-19.0.0.aar/0734fa91648f14969f623a5a12bc46fe/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/play-services-base-17.1.0.aar/a1eeaf4d1770b8faa1b9b5011378e173/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/play-services-base-17.1.0.aar/a1eeaf4d1770b8faa1b9b5011378e173/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-19.3.0.aar/bb3c67d97d5babf7c16956f692302147/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-19.3.0.aar/bb3c67d97d5babf7c16956f692302147/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/play-services-tasks-17.0.0.aar/1f1032af2ee2b0b6b6a0a306f4d32c97/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/play-services-tasks-17.0.0.aar/1f1032af2ee2b0b6b6a0a306f4d32c97/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/8cb5094924cf4da7c8c7a38ab316ab86/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/8cb5094924cf4da7c8c7a38ab316ab86/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/fragment-1.1.0.aar/a1b95b2575b9c4bd0f1b96adab4454e3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/fragment-1.1.0.aar/a1b95b2575b9c4bd0f1b96adab4454e3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/6d05afcb915767e1c0d69597788ca29e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/6d05afcb915767e1c0d69597788ca29e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/139ccf1243c7cb6e849e94e9e6fa9fac/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/139ccf1243c7cb6e849e94e9e6fa9fac/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/activity-1.0.0.aar/f62aa49952a3f98786379cce7029fdd9/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/activity-1.0.0.aar/f62aa49952a3f98786379cce7029fdd9/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/customview-1.0.0.aar/ba118e5874160e1e1b4eba3ce12e2659/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/customview-1.0.0.aar/ba118e5874160e1e1b4eba3ce12e2659/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/core-1.1.0.aar/2345324afe3a3bd1b02e378cb1178072/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/core-1.1.0.aar/2345324afe3a3bd1b02e378cb1178072/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.2.0.aar/bfd65fd04b67b5e40ee2748ec5bf5251/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.2.0.aar/bfd65fd04b67b5e40ee2748ec5bf5251/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/savedstate-1.0.0.aar/debf3d0aa0838a5450eb43bd6c9cbd68/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/savedstate-1.0.0.aar/debf3d0aa0838a5450eb43bd6c9cbd68/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.0.0.aar/a38e50cefe1458d12d1b169f454e9195/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.0.0.aar/a38e50cefe1458d12d1b169f454e9195/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/6665799a11946c944562f58c94da05dc/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/6665799a11946c944562f58c94da05dc/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/76144a3eb76a2cd45409d72af06311eb/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/76144a3eb76a2cd45409d72af06311eb/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.0.aar/53fd94a06422a1698b9ddeb5742cffe1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.0.aar/53fd94a06422a1698b9ddeb5742cffe1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0.aar/0b6d8c3c961fcb9ba7913f1c8bb7a667/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0.aar/0b6d8c3c961fcb9ba7913f1c8bb7a667/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:16.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-firebase-components-16.0.0.aar/1b11daeb26a61acfbba792da74358278/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-firebase-components-16.0.0.aar/1b11daeb26a61acfbba792da74358278/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.1.0.aar/ec3d66a6ca865e4e730734f096af2574/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.1.0.aar/ec3d66a6ca865e4e730734f096af2574/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-exoplayer-hls-2.9.6.aar/52c375b963fb8abc1f1e39c9c2da0847/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-exoplayer-hls-2.9.6.aar/52c375b963fb8abc1f1e39c9c2da0847/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-exoplayer-dash-2.9.6.aar/65a77a0b009ac75e468307fecd4422ad/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-exoplayer-dash-2.9.6.aar/65a77a0b009ac75e468307fecd4422ad/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.6] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-exoplayer-smoothstreaming-2.9.6.aar/b2c92dbb148e6ff86358611445e81947/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.6] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-exoplayer-smoothstreaming-2.9.6.aar/b2c92dbb148e6ff86358611445e81947/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-exoplayer-core-2.9.6.aar/9dad8e678bab93b7af001272e25502ef/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-exoplayer-core-2.9.6.aar/9dad8e678bab93b7af001272e25502ef/AndroidManifest.xml:20:5-22:41
+INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/debug/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/android/app/src/debug/AndroidManifest.xml
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [:firebase_auth] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:33:9-39:19
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:33:9-39:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-19.3.0.aar/bb3c67d97d5babf7c16956f692302147/AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-19.3.0.aar/bb3c67d97d5babf7c16956f692302147/AndroidManifest.xml:32:9-36:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:35:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-19.3.0.aar/bb3c67d97d5babf7c16956f692302147/AndroidManifest.xml:36:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-19.3.0.aar/bb3c67d97d5babf7c16956f692302147/AndroidManifest.xml:34:13-43
+	android:name
+		ADDED from [:firebase_auth] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
+meta-data#com.google.firebase.components:io.flutter.plugins.firebaseauth.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_auth] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_auth] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_auth] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-122
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_core] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_core] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_core] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-123
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [:image_picker] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from [:image_picker] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [:image_picker] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from [:image_picker] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-78
+provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
+ADDED from [:image_picker] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-19:20
+	android:grantUriPermissions
+		ADDED from [:image_picker] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-47
+	android:authorities
+		ADDED from [:image_picker] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-74
+	android:exported
+		ADDED from [:image_picker] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-37
+	android:name
+		ADDED from [:image_picker] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-82
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:image_picker] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-18:75
+	android:resource
+		ADDED from [:image_picker] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-72
+	android:name
+		ADDED from [:image_picker] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-67
+uses-permission#android.permission.CAMERA
+ADDED from [:camera] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-65
+	android:name
+		ADDED from [:camera] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from [:camera] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-71
+	android:name
+		ADDED from [:camera] /Users/lukepetersen9/Documents/AppDev/FlutterProjects/fishrfrontend/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-68
+activity#com.google.firebase.auth.internal.FederatedSignInActivity
+ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:24:9-31:50
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:26:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:28:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:27:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:29:13-102
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:30:13-72
+	tools:replace
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:31:13-47
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:25:13-85
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:36:13-38:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:38:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/firebase-auth-19.2.0.aar/60b02166fdc748fb57659ef3a74789ed/AndroidManifest.xml:37:17-109
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/play-services-base-17.1.0.aar/a1eeaf4d1770b8faa1b9b5011378e173/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/play-services-base-17.1.0.aar/a1eeaf4d1770b8faa1b9b5011378e173/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/play-services-base-17.1.0.aar/a1eeaf4d1770b8faa1b9b5011378e173/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/play-services-base-17.1.0.aar/a1eeaf4d1770b8faa1b9b5011378e173/AndroidManifest.xml:24:13-79
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-19.3.0.aar/bb3c67d97d5babf7c16956f692302147/AndroidManifest.xml:26:9-30:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-19.3.0.aar/bb3c67d97d5babf7c16956f692302147/AndroidManifest.xml:28:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-19.3.0.aar/bb3c67d97d5babf7c16956f692302147/AndroidManifest.xml:29:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-19.3.0.aar/bb3c67d97d5babf7c16956f692302147/AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-19.3.0.aar/bb3c67d97d5babf7c16956f692302147/AndroidManifest.xml:27:13-77
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/8cb5094924cf4da7c8c7a38ab316ab86/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/8cb5094924cf4da7c8c7a38ab316ab86/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/8cb5094924cf4da7c8c7a38ab316ab86/AndroidManifest.xml:24:13-58
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-exoplayer-core-2.9.6.aar/9dad8e678bab93b7af001272e25502ef/AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /Users/lukepetersen9/.gradle/caches/transforms-1/files-1.1/jetified-exoplayer-core-2.9.6.aar/9dad8e678bab93b7af001272e25502ef/AndroidManifest.xml:24:22-76
