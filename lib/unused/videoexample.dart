@@ -1,3 +1,4 @@
+/*
 import 'dart:async';
 import 'dart:io';
 import 'package:camera/camera.dart';
@@ -311,3 +312,4 @@ class _VideoRecorderExampleState extends State<VideoRecorderExample> {
         textColor: Colors.white);
   }
 }
+*/
