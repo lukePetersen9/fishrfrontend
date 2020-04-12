@@ -170,7 +170,7 @@ class _LoginSignUpState extends State<LoginSignUp>
                                     print(value);
                                     if (value != null) {
                                       User user = User.init(
-                                          _username.text, _password.text,
+                                          _username.text,
                                           first: _first.text,
                                           last: _last.text,
                                           phone: _phone.text,

@@ -5,14 +5,14 @@ import 'package:scoped_model/scoped_model.dart';
 
 class User extends Model {
   bool makeUser;
-  String first, last, e, phone, _username, _password, profilePicture, _id;
+  String first, last, e, phone, _username, profilePicture, _id;
   List<User> _followerList, _followingList;
   List<SingleCard> _privateCards, _publicCards;
   SimpleUser _simple;
 
   User();
 
-  User.init(this._username, this._password,
+  User.init(this._username,
       {this.first = 'Luke',
       this.last = 'Petersen',
       this.e = 'lukepetersen29@gmail.com',
@@ -33,7 +33,6 @@ class User extends Model {
         this._followerList.add(
               new User.init(
                 r.nextInt(10000).toString(),
-                'password',
                 first: r.nextInt(1000).toString(),
                 makeUser: false,
               ),
@@ -55,7 +54,6 @@ class User extends Model {
         this._followingList.add(
               new User.init(
                 r.nextInt(10000).toString(),
-                'password',
                 first: r.nextInt(1000).toString(),
                 makeUser: false,
               ),
