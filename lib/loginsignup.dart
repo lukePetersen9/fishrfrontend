@@ -1,12 +1,8 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:sample/databaseinterface.dart';
-import 'package:sample/databasemethods.dart';
+import 'package:sample/Models/user.dart';
+import 'package:sample/backendServices/Express/databasemethods.dart';
+import 'package:sample/backendServices/Firebase/baseauth.dart';
 import 'package:sample/yourPage.dart';
-import 'package:scoped_model/scoped_model.dart';
-import 'user.dart';
-import 'baseauth.dart';
-import 'homepagetabs.dart';
 
 class LoginSignUp extends StatefulWidget {
   LoginSignUp();

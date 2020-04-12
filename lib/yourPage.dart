@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sample/Models/user.dart';
 import 'card.dart';
-import 'user.dart';
 
 class YourPage extends StatelessWidget {
   final User data;

@@ -1,8 +1,5 @@
-import 'dart:io';
-import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:sample/singlepost.dart';
-import 'package:sample/videoexample.dart';
 
 class MakePostPage extends StatefulWidget {
   MakePostPage();

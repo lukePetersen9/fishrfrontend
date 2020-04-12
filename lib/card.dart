@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:sample/singlecard.dart';
+import 'package:sample/Models/singlecard.dart';
+import 'package:sample/Models/user.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'indicator.dart';
 import 'picturevid.dart';
-import 'user.dart';
-/*
-Master Password for database:  zmZMGOOIqHV7t4cP0VBV
- */
 
-/*Hello */
 class CustomCard extends StatefulWidget {
   final SingleCard data;
   final User user;

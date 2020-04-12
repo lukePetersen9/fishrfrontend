@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-/*
-Master Password for database:  zmZMGOOIqHV7t4cP0VBV
- */
-
 class Indicator extends StatefulWidget {
   final TabController tabController;
   final int length;

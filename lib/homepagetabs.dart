@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:sample/Models/user.dart';
 import 'package:sample/makepost.dart';
 import 'package:sample/messages.dart';
 import 'package:sample/publicpage.dart';
 import 'package:sample/search.dart';
 import 'yourPage.dart';
 import 'package:scoped_model/scoped_model.dart';
-import 'user.dart';
 
 class HomePageTabs extends StatefulWidget {
   final User model;

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sample/publicpage.dart';
-import 'yourPage.dart';
-import 'package:scoped_model/scoped_model.dart';
-import 'user.dart';
+import 'package:sample/Models/user.dart';
 
 class Messages extends StatefulWidget {
   final User data;

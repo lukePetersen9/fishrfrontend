@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-/*
-Master Password for database:  zmZMGOOIqHV7t4cP0VBV
- */
+
 
 class PictureVideo extends StatefulWidget {
   final String pic, vid;

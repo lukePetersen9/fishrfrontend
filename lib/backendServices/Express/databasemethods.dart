@@ -1,7 +1,7 @@
 import 'dart:convert';
-
 import 'package:http/http.dart';
-import 'user.dart';
+import 'package:sample/Models/user.dart';
+
 
 Future<int> makeUser(User user) async {
   // set up POST request arguments

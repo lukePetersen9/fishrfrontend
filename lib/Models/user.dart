@@ -1,6 +1,6 @@
 import 'dart:math';
+import 'package:sample/Models/singlecard.dart';
 import 'simpleuser.dart';
-import 'package:sample/singlecard.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class User extends Model {

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'singlecard.dart';
+import 'package:sample/Models/singlecard.dart';
+import 'package:sample/Models/user.dart';
 import 'card.dart';
-import 'user.dart';
-import 'dart:developer';
 
 class PublicPage extends StatelessWidget {
   final User data;

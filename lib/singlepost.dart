@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:video_player/video_player.dart';
@@ -13,7 +12,7 @@ class _SinglePostState extends State<SinglePost>
     with AutomaticKeepAliveClientMixin<SinglePost> {
   List<Widget> tabs = new List<Widget>();
   VideoPlayerController _controller;
-  File _image, _video;
+  File _image;
   bool _play = false;
 
   Future getImage() async {
@@ -38,6 +37,7 @@ class _SinglePostState extends State<SinglePost>
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return AspectRatio(
       aspectRatio: 487 / 451,
       child: GestureDetector(
