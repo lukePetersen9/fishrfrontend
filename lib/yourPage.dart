@@ -9,7 +9,7 @@ class YourPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: Text(data.userID),
         automaticallyImplyLeading: false,
       ),
       body: ListView.builder(

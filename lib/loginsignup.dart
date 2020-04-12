@@ -1,7 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:sample/databaseinterface.dart';
+import 'package:sample/databasemethods.dart';
+import 'package:sample/yourPage.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'user.dart';
+import 'baseauth.dart';
+import 'homepagetabs.dart';
 
 class LoginSignUp extends StatefulWidget {
   LoginSignUp();
@@ -11,9 +16,9 @@ class LoginSignUp extends StatefulWidget {
 
 class _LoginSignUpState extends State<LoginSignUp>
     with SingleTickerProviderStateMixin {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
   TabController _tabController;
-  TextEditingController _username, _password, _email;
+  TextEditingController _username, _password, _email, _first, _last, _phone;
+  AuthService _authService = new AuthService();
   bool show = false;
   String userId = 'hello';
 
@@ -24,6 +29,9 @@ class _LoginSignUpState extends State<LoginSignUp>
     _username = TextEditingController();
     _password = TextEditingController();
     _email = TextEditingController();
+    _first = TextEditingController();
+    _last = TextEditingController();
+    _phone = TextEditingController();
     _tabController.addListener(() {
       setState(() {});
     });
@@ -93,6 +101,7 @@ class _LoginSignUpState extends State<LoginSignUp>
                       child: Container(
                         decoration: BoxDecoration(color: Colors.white54),
                         child: TextField(
+                          controller: _first,
                           decoration: InputDecoration.collapsed(
                             hintText: 'first name',
                           ),
@@ -102,6 +111,7 @@ class _LoginSignUpState extends State<LoginSignUp>
                     Expanded(
                       flex: 2,
                       child: TextField(
+                        controller: _last,
                         decoration:
                             InputDecoration.collapsed(hintText: 'last name'),
                       ),
@@ -109,6 +119,7 @@ class _LoginSignUpState extends State<LoginSignUp>
                     Expanded(
                       flex: 2,
                       child: TextField(
+                        controller: _phone,
                         decoration:
                             InputDecoration.collapsed(hintText: 'phone number'),
                       ),
@@ -147,33 +158,52 @@ class _LoginSignUpState extends State<LoginSignUp>
                     Expanded(
                       flex: 4,
                       child: Center(
-                        child: ScopedModel<User>(
-                          model: User.init(_username.text, _password.text,
-                              makeUser: true),
-                          child: Column(
-                            children: [
-                              ScopedModelDescendant<User>(
-                                builder: (context, widget, model) {
-                                  return FlatButton(
-                                    child: Text('sign up'),
-                                    onPressed: () {
-                                      signup();
-
-                                      // Navigator.push(
-                                      //   context,
-                                      //   MaterialPageRoute(
-                                      //     builder: (context) =>
-                                      //         HomePageTabs(model),
-                                      //   ),
-                                      // );
-                                    },
-                                    padding: EdgeInsets.symmetric(
-                                        vertical: 15, horizontal: 5),
-                                  );
-                                },
-                              ),
-                            ],
-                          ),
+                        child: Column(
+                          children: [
+                            FlatButton(
+                              child: Text('sign up'),
+                              onPressed: () async {
+                                setState(() {
+                                  show = true;
+                                });
+                                await _authService
+                                    .registerWithEmailAndPassword(
+                                        _email.text, _password.text)
+                                    .then(
+                                  (value) async {
+                                    print(value);
+                                    if (value != null) {
+                                      User user = User.init(
+                                          _username.text, _password.text,
+                                          first: _first.text,
+                                          last: _last.text,
+                                          phone: _phone.text,
+                                          e: _email.text,
+                                          makeUser: true);
+                                      user.setUserID(value);
+                                      makeUser(user).then(
+                                        (value) {
+                                          print(value);
+                                          if (value == 200) {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    YourPage(user),
+                                              ),
+                                            );
+                                          }
+                                        },
+                                      );
+                                    }
+                                  },
+                                );
+                              },
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 15, horizontal: 5),
+                            ),
+                            show ? CircularProgressIndicator() : Container(),
+                          ],
                         ),
                       ),
                     ),
@@ -185,19 +215,5 @@ class _LoginSignUpState extends State<LoginSignUp>
         ),
       ),
     );
-  }
-
-  void signup() async {
-    final FirebaseUser user = await _auth
-        .createUserWithEmailAndPassword(
-      email: _email.text,
-      password: _password.text,
-    )
-        .then((value) {
-      setState(() {
-        userId = value.user.email;
-      });
-      return value.user;
-    });
   }
 }

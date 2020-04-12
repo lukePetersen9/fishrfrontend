@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "440637158927",
+    "firebase_url": "https://fishr-dbd02.firebaseio.com",
+    "project_id": "fishr-dbd02",
+    "storage_bucket": "fishr-dbd02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440637158927:android:e53789df778d087f9e957a",
+        "android_client_info": {
+          "package_name": "com.lukeappdev.fishr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440637158927-h39ak7nug3dfeta2pmpir87tdtver2d6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgxLp6OEFd2PknSqAxjoa8iNKfmEDiuVo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440637158927-h39ak7nug3dfeta2pmpir87tdtver2d6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "440637158927-j3097rv4feqjno8gtp7eia4bv3pmjvnd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lukeapp.fishr"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

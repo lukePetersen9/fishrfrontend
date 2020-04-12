@@ -5,7 +5,7 @@ import 'package:scoped_model/scoped_model.dart';
 
 class User extends Model {
   bool makeUser;
-  String first, last, e, phone, _username, _password, profilePicture;
+  String first, last, e, phone, _username, _password, profilePicture, _id;
   List<User> _followerList, _followingList;
   List<SingleCard> _privateCards, _publicCards;
   SimpleUser _simple;
@@ -64,8 +64,26 @@ class User extends Model {
     }
   }
 
+  Map<String, dynamic> toJson() => {
+        'first': first,
+        'last': last,
+        'email': e,
+        'phone': phone,
+        'username': _username,
+        'profilePicture': profilePicture,
+        'userID': _id,
+      };
+
   String get username {
     return _username;
+  }
+
+  String get userID {
+    return _id;
+  }
+
+  setUserID(String id) {
+    _id = id;
   }
 
   String get firstName {
@@ -108,7 +126,7 @@ class User extends Model {
     return _publicCards;
   }
 
-  SimpleUser get simpleUser{
+  SimpleUser get simpleUser {
     return _simple;
   }
 }
