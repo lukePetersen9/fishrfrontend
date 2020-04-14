@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sample/Models/user.dart';
 import 'package:sample/backendServices/Express/databasemethods.dart';
 import 'package:sample/backendServices/Firebase/baseauth.dart';
-import 'package:sample/yourPage.dart';
+import 'package:sample/homepagetabs.dart';
 
 class LoginSignUp extends StatefulWidget {
   LoginSignUp();
@@ -167,25 +167,23 @@ class _LoginSignUpState extends State<LoginSignUp>
                                         _email.text, _password.text)
                                     .then(
                                   (value) async {
-                                    print(value);
                                     if (value != null) {
                                       User user = User.init(
-                                          _username.text,
-                                          first: _first.text,
-                                          last: _last.text,
-                                          phone: _phone.text,
-                                          e: _email.text,
-                                          makeUser: true);
-                                      user.setUserID(value);
+                                        _username.text,
+                                        value,
+                                        first: _first.text,
+                                        last: _last.text,
+                                        phone: _phone.text,
+                                        e: _email.text,
+                                      );
                                       makeUser(user).then(
                                         (value) {
-                                          print(value);
                                           if (value == 200) {
                                             Navigator.push(
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    YourPage(user),
+                                                    HomePageTabs(user),
                                               ),
                                             );
                                           }

@@ -4,6 +4,9 @@ import 'package:image_picker/image_picker.dart';
 import 'package:video_player/video_player.dart';
 
 class SinglePost extends StatefulWidget {
+  final Function setImage;
+  SinglePost(this.setImage);
+
   @override
   _SinglePostState createState() => _SinglePostState();
 }
@@ -19,6 +22,7 @@ class _SinglePostState extends State<SinglePost>
     var image = await ImagePicker.pickImage(source: ImageSource.camera);
     setState(() {
       _image = image;
+      widget.setImage(_image.path);
     });
   }
 
@@ -29,8 +33,6 @@ class _SinglePostState extends State<SinglePost>
     _controller = VideoPlayerController.file(video)
       ..initialize().then((_) {
         _controller.setLooping(true);
-
-        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});
       });
   }
@@ -44,7 +46,8 @@ class _SinglePostState extends State<SinglePost>
         onTap: () {
           setState(() {
             if (!_play && _image == null) {
-              getImage();
+            //  getImage();
+            widget.setImage('/Users/lukepetersen9/Desktop/IMG_1440.JPG');
             } else if (!_play && _image != null) {
               if (_controller != null) {
                 _controller.play();

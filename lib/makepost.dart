@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sample/backendServices/Express/databasemethods.dart';
 import 'package:sample/singlepost.dart';
+
+import 'Models/post.dart';
 
 class MakePostPage extends StatefulWidget {
   MakePostPage();
@@ -10,10 +13,12 @@ class MakePostPage extends StatefulWidget {
 class _MakePostPageState extends State<MakePostPage>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
+  Post _post;
 
   @override
   void initState() {
     super.initState();
+    _post = new Post();
     _tabController = TabController(vsync: this, length: 4);
     _tabController.addListener(() {
       setState(() {});
@@ -28,7 +33,6 @@ class _MakePostPageState extends State<MakePostPage>
 
   @override
   Widget build(BuildContext context) {
-    print('made it');
     return DefaultTabController(
       length: 4,
       child: WillPopScope(
@@ -49,10 +53,10 @@ class _MakePostPageState extends State<MakePostPage>
                   child: TabBarView(
                     controller: _tabController,
                     children: <Widget>[
-                      SinglePost(),
-                      SinglePost(),
-                      SinglePost(),
-                      SinglePost(),
+                      SinglePost(_post.image1),
+                      SinglePost(_post.image2),
+                      SinglePost(_post.image3),
+                      SinglePost(_post.image4),
                     ],
                   ),
                 ),
@@ -68,7 +72,17 @@ class _MakePostPageState extends State<MakePostPage>
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
-              Navigator.pop(context);
+              print('object');
+              sendPost(_post).then(
+                (value) {
+                  print(value);
+                  if (value == 200) {
+                    Navigator.pop(context);
+                  }
+                },
+              );
+
+              //
             },
             child: Icon(Icons.screen_share),
           ),
