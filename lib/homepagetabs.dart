@@ -16,6 +16,7 @@ class HomePageTabs extends StatefulWidget {
 
 class _HomePageTabsState extends State<HomePageTabs>
     with SingleTickerProviderStateMixin {
+
   TabController _tabController;
   bool show = false;
 
@@ -49,7 +50,7 @@ class _HomePageTabsState extends State<HomePageTabs>
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => MakePostPage(),
+                    builder: (context) => MakePostPage(widget.model.userID),
                   ),
                 );
               },

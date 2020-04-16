@@ -4,8 +4,8 @@ import 'package:image_picker/image_picker.dart';
 import 'package:video_player/video_player.dart';
 
 class SinglePost extends StatefulWidget {
-  final Function setImage;
-  SinglePost(this.setImage);
+  final Function setImage, setVideo;
+  SinglePost(this.setImage, this.setVideo);
 
   @override
   _SinglePostState createState() => _SinglePostState();
@@ -22,18 +22,20 @@ class _SinglePostState extends State<SinglePost>
     var image = await ImagePicker.pickImage(source: ImageSource.camera);
     setState(() {
       _image = image;
-      widget.setImage(_image.path);
+      widget.setImage(_image);
     });
   }
 
   Future getVideo() async {
     var video = await ImagePicker.pickVideo(
-      source: ImageSource.gallery,
+      source: ImageSource.camera,
     );
     _controller = VideoPlayerController.file(video)
       ..initialize().then((_) {
         _controller.setLooping(true);
-        setState(() {});
+        setState(() {
+          widget.setVideo(video.path);
+        });
       });
   }
 
@@ -46,8 +48,7 @@ class _SinglePostState extends State<SinglePost>
         onTap: () {
           setState(() {
             if (!_play && _image == null) {
-            //  getImage();
-            widget.setImage('/Users/lukepetersen9/Desktop/IMG_1440.JPG');
+              getImage();
             } else if (!_play && _image != null) {
               if (_controller != null) {
                 _controller.play();

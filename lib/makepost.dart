@@ -5,21 +5,26 @@ import 'package:sample/singlepost.dart';
 import 'Models/post.dart';
 
 class MakePostPage extends StatefulWidget {
-  MakePostPage();
+  final String _userID;
+  MakePostPage(this._userID);
   @override
   _MakePostPageState createState() => _MakePostPageState();
 }
 
 class _MakePostPageState extends State<MakePostPage>
     with SingleTickerProviderStateMixin {
+  TextEditingController _titleController, _descriptionController;
   TabController _tabController;
   Post _post;
+  String i = 'sdfas';
 
   @override
   void initState() {
     super.initState();
-    _post = new Post();
+    _post = new Post(widget._userID);
     _tabController = TabController(vsync: this, length: 4);
+    _titleController = new TextEditingController();
+    _descriptionController = new TextEditingController();
     _tabController.addListener(() {
       setState(() {});
     });
@@ -38,7 +43,7 @@ class _MakePostPageState extends State<MakePostPage>
       child: WillPopScope(
         child: Scaffold(
           appBar: AppBar(
-            title: Text('Image Picker Example'),
+            title: Text(i),
             leading: IconButton(
                 icon: Icon(Icons.arrow_back_ios),
                 onPressed: () {
@@ -53,17 +58,19 @@ class _MakePostPageState extends State<MakePostPage>
                   child: TabBarView(
                     controller: _tabController,
                     children: <Widget>[
-                      SinglePost(_post.image1),
-                      SinglePost(_post.image2),
-                      SinglePost(_post.image3),
-                      SinglePost(_post.image4),
+                      SinglePost(_post.image1, _post.video1),
+                      SinglePost(_post.image2, _post.video2),
+                      SinglePost(_post.image3, _post.video3),
+                      SinglePost(_post.image4, _post.video4),
                     ],
                   ),
                 ),
                 TextField(
+                  controller: _titleController,
                   decoration: InputDecoration.collapsed(hintText: 'Title'),
                 ),
                 TextField(
+                  controller: _descriptionController,
                   decoration:
                       InputDecoration.collapsed(hintText: 'Description'),
                 ),
@@ -72,12 +79,20 @@ class _MakePostPageState extends State<MakePostPage>
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
-              print('object');
+              print('pressed');
+              _post.setTitle(_titleController.text);
+              _post.setDescription(_descriptionController.text);
+              setState(() {
+                i = 'posting...';
+              });
               sendPost(_post).then(
                 (value) {
-                  print(value);
                   if (value == 200) {
                     Navigator.pop(context);
+                  } else {
+                    setState(() {
+                      i = 'something went wrong:/';
+                    });
                   }
                 },
               );

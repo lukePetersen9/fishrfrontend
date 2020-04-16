@@ -25,16 +25,17 @@ Future<int> sendPost(Post _post) async {
   Map<String, String> headers = {
     'Content-Type': 'application/json; charset=UTF-8',
   };
-  print('heille ');
   try {
+    print('making post');
     Response response = await post(
-      url + 'makepost',
+      url + 'makePost',
       headers: headers,
       body: json.encode(_post),
     );
+    print('done posting');
     return response.statusCode;
   } catch (e) {
     print(e);
-    return 1;
+    return e;
   }
 }
