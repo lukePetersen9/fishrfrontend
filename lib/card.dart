@@ -30,7 +30,7 @@ class _CustomCardState extends State<CustomCard>
     for (int i = 0; i < widget.data.pictures.length; i++) {
       tabs.add(
         PictureVideo(
-            widget.data.pictures[i], widget.data.videos[0]),
+            'https://fishr-data.s3.us-east-2.amazonaws.com/posts/1587096465628k4R1DoDP3yWDWsnR9t3z0IWdGJw2', widget.data.videos[0]),
       );
     }
   }

@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 import 'package:sample/Models/post.dart';
 import 'package:sample/Models/user.dart';
 
@@ -10,7 +10,7 @@ Future<int> makeUser(User user) async {
     'Content-Type': 'application/json; charset=UTF-8',
   };
   try {
-    Response response = await post(
+    var response = await http.post(
       url + 'makeUser',
       headers: headers,
       body: json.encode(user),
@@ -22,20 +22,25 @@ Future<int> makeUser(User user) async {
 }
 
 Future<int> sendPost(Post _post) async {
-  Map<String, String> headers = {
-    'Content-Type': 'application/json; charset=UTF-8',
-  };
+  var request = http.MultipartRequest('POST', Uri.parse(url + 'makePost'));
+  for (String imvid in _post.imagesAndVideos) {
+    if (imvid != null) {
+      request.files.add(
+        await http.MultipartFile.fromPath(
+          'picturesAndVideos',
+          imvid,
+          filename: _post.userID + imvid.substring(imvid.length - 4),
+        ),
+      );
+    }
+  }
+  request.fields['userID'] = _post.userID;
+  request.fields['title'] = _post.title;
+  request.fields['description'] = _post.description;
   try {
-    print('making post');
-    Response response = await post(
-      url + 'makePost',
-      headers: headers,
-      body: json.encode(_post),
-    );
-    print('done posting');
-    return response.statusCode;
+    var res = await request.send();
+    return res.statusCode;
   } catch (e) {
-    print(e);
     return e;
   }
 }

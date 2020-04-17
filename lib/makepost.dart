@@ -16,7 +16,7 @@ class _MakePostPageState extends State<MakePostPage>
   TextEditingController _titleController, _descriptionController;
   TabController _tabController;
   Post _post;
-  String i = 'sdfas';
+  String i = 'Make Post';
 
   @override
   void initState() {
@@ -79,7 +79,6 @@ class _MakePostPageState extends State<MakePostPage>
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
-              print('pressed');
               _post.setTitle(_titleController.text);
               _post.setDescription(_descriptionController.text);
               setState(() {

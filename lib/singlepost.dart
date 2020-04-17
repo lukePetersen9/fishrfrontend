@@ -19,24 +19,30 @@ class _SinglePostState extends State<SinglePost>
   bool _play = false;
 
   Future getImage() async {
-    var image = await ImagePicker.pickImage(source: ImageSource.camera);
-    setState(() {
-      _image = image;
-      widget.setImage(_image);
+    await ImagePicker.pickImage(source: ImageSource.camera).then((value) {
+      setState(() {
+        _image = value;
+        widget.setImage(_image);
+      });
     });
   }
 
   Future getVideo() async {
-    var video = await ImagePicker.pickVideo(
+    await ImagePicker.pickVideo(
       source: ImageSource.camera,
-    );
-    _controller = VideoPlayerController.file(video)
-      ..initialize().then((_) {
-        _controller.setLooping(true);
-        setState(() {
-          widget.setVideo(video.path);
-        });
-      });
+    ).then((value) {
+      _controller = VideoPlayerController.file(value)
+        ..initialize().then(
+          (_) {
+            setState(
+              () {
+                _controller.setLooping(true);
+                widget.setVideo(value.path);
+              },
+            );
+          },
+        );
+    });
   }
 
   @override
