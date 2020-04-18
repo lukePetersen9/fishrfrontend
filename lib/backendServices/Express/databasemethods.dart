@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:sample/Models/post.dart';
 import 'package:sample/Models/user.dart';
+import 'package:sample/Models/user.dart';
 
 final String url = 'http://18.188.191.226:3000/';
 
@@ -18,6 +19,52 @@ Future<int> makeUser(User user) async {
     return response.statusCode;
   } catch (e) {
     return 1;
+  }
+}
+
+Future<List<User>> searchText(String s) async {
+  Map<String, String> headers = {
+    'Content-Type': 'application/json; charset=UTF-8',
+  };
+  try {
+    var response = await http.get(
+      url + 'search/' + s,
+      headers: headers,
+    );
+    return User().parseUsers(response.body);
+  } catch (e) {
+    return null;
+  }
+}
+
+Future<User> getUserData(String s) async {
+  Map<String, String> headers = {
+    'Content-Type': 'application/json; charset=UTF-8',
+  };
+  try {
+    var response = await http.get(
+      url + 'user/' + s,
+      headers: headers,
+    );
+    print(response.body);
+    return User().parseUser(response.body);
+  } catch (e) {
+    return null;
+  }
+}
+
+Future<List<User>> emptySearchList() async {
+  Map<String, String> headers = {
+    'Content-Type': 'application/json; charset=UTF-8',
+  };
+  try {
+    var response = await http.get(
+      url + 'searchEmpty/',
+      headers: headers,
+    );
+    return User().parseUsers(response.body);
+  } catch (e) {
+    return null;
   }
 }
 

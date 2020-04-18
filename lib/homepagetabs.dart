@@ -4,6 +4,7 @@ import 'package:sample/makepost.dart';
 import 'package:sample/messages.dart';
 import 'package:sample/publicpage.dart';
 import 'package:sample/search.dart';
+import 'package:sample/userprofile.dart';
 import 'yourPage.dart';
 import 'package:scoped_model/scoped_model.dart';
 
@@ -16,7 +17,6 @@ class HomePageTabs extends StatefulWidget {
 
 class _HomePageTabsState extends State<HomePageTabs>
     with SingleTickerProviderStateMixin {
-
   TabController _tabController;
   bool show = false;
 
@@ -73,14 +73,8 @@ class _HomePageTabsState extends State<HomePageTabs>
                           ),
                         ),
                       ),
-                      FlatButton(
-                        onPressed: () {},
-                        child: Text(model.firstName),
-                      ),
-                      FlatButton(
-                        onPressed: () {},
-                        child: Text(model.username),
-                      ),
+                      Text(model.firstName),
+                      Text(model.username),
                       FlatButton(
                         onPressed: () {},
                         child:
@@ -92,7 +86,14 @@ class _HomePageTabsState extends State<HomePageTabs>
                             model.followingCount.toString() + ' following'),
                       ),
                       FlatButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => UserProfile(model.userID),
+                            ),
+                          );
+                        },
                         child: Text('Your profile'),
                       ),
                       FlatButton(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sample/Models/user.dart';
+import 'package:sample/userprofile.dart';
+import 'backendServices/Express/databasemethods.dart';
 
 class SearchPage extends StatefulWidget {
   final User data;
@@ -9,6 +11,14 @@ class SearchPage extends StatefulWidget {
 }
 
 class _SearchPageState extends State<SearchPage> {
+  List<User> searchResults;
+
+  @override
+  void initState() {
+    super.initState();
+    searchResults = new List<User>();
+  }
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -19,38 +29,72 @@ class _SearchPageState extends State<SearchPage> {
             decoration: InputDecoration.collapsed(
               hintText: 'Search...',
             ),
+            onChanged: (s) {
+              if (s.isNotEmpty) {
+                searchText(s).then((value) {
+                  setState(() {
+                    if (value != null) {
+                      searchResults = value;
+                    }
+                  });
+                });
+              } else {
+                emptySearchList().then((value) {
+                  setState(() {
+                    if (value != null) {
+                      searchResults = value;
+                    }
+                  });
+                });
+              }
+            },
           ),
           actions: <Widget>[
             IconButton(icon: Icon(Icons.search), onPressed: () {})
           ],
         ),
         body: ListView.builder(
-          itemCount: 5,
+          itemCount: searchResults.length,
           itemBuilder: (BuildContext context, int index) {
-            return FlatButton(
-              onPressed: () {},
-              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-              child: Row(
-                children: <Widget>[
-                  Container(
-                    width: 30,
-                    height: 30,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: NetworkImage(widget.data.profilePicture),
+            return Container(
+              padding: EdgeInsets.symmetric(horizontal: 5, vertical: 2),
+              child: FlatButton(
+                color: Colors.grey[200],
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          UserProfile(searchResults[index].userID),
+                    ),
+                  );
+                },
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                child: Row(
+                  children: <Widget>[
+                    Container(
+                      width: 30,
+                      height: 30,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image:
+                              NetworkImage(searchResults[index].profilePicture),
+                        ),
                       ),
                     ),
-                  ),
-                  Column(
-                    children: <Widget>[
-                      Text(widget.data.firstName),
-                      Text(widget.data.username),
-                    ],
-                  ),
-                  Container(
-                    color: Colors.green,
-                  ),
-                ],
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                            '${searchResults[index].firstName} ${searchResults[index].lastName}'),
+                        Text('${searchResults[index].username}'),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             );
           },
