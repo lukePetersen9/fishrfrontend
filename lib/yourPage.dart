@@ -1,24 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:sample/Models/user.dart';
+import 'package:sample/Models/currentuser.dart';
 import 'card.dart';
 
 class YourPage extends StatelessWidget {
-  final User data;
+  final CurrentUser data;
   YourPage(this.data);
   @override
   Widget build(BuildContext context) {
+    print(data.privateCards);
     return Scaffold(
       appBar: AppBar(
-        title: Text(data.userID),
+        title: Text(data.id),
         automaticallyImplyLeading: false,
       ),
       body: ListView.builder(
         itemCount: data.privateCardListLength,
         itemBuilder: (BuildContext context, int index) {
-          return CustomCard(
-            data.privateCardList[index],
-            data
-          );
+          return CustomCard(data.privateCards[index], data);
         },
       ),
     );

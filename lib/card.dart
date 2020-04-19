@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:sample/Models/singlecard.dart';
-import 'package:sample/Models/user.dart';
-import 'package:scoped_model/scoped_model.dart';
+import 'Models/currentuser.dart';
 import 'indicator.dart';
 import 'picturevid.dart';
 
 class CustomCard extends StatefulWidget {
   final SingleCard data;
-  final User user;
+  final CurrentUser user;
   CustomCard(this.data, this.user);
 
   @override
@@ -30,7 +29,12 @@ class _CustomCardState extends State<CustomCard>
     for (int i = 0; i < widget.data.pictures.length; i++) {
       tabs.add(
         PictureVideo(
-            'https://fishr-data.s3.us-east-2.amazonaws.com/posts/1587096465628k4R1DoDP3yWDWsnR9t3z0IWdGJw2', widget.data.videos[0]),
+            widget.data.pictures[i] == null
+                ? 'https://fishr-data.s3.us-east-2.amazonaws.com/posts/1587096465628k4R1DoDP3yWDWsnR9t3z0IWdGJw2'
+                : widget.data.pictures[i],
+            widget.data.videos[i] == null
+                ? 'https://fishr-data.s3.us-east-2.amazonaws.com/posts/1587100559921MHW7F2eDo7SoP21fiq7X7ThpSTq2.MOV'
+                : widget.data.videos[i]),
       );
     }
   }
@@ -60,26 +64,19 @@ class _CustomCardState extends State<CustomCard>
               ),
               Align(
                 alignment: Alignment.bottomRight,
-                child: ScopedModel<SingleCard>(
-                  model: widget.data,
-                  child: IconButton(
+                child: IconButton(
                     onPressed: () {
-                      print('like ' + widget.data.title);
-                      widget.data.toggleLike();
+                      setState(() {
+                        widget.data.toggleLike();
+                      });
                     },
-                    icon: ScopedModelDescendant<SingleCard>(
-                      builder: (context, widget, model) {
-                        return Icon(
-                          model.liked()
-                              ? Icons.favorite
-                              : Icons.favorite_border,
-                          size: 30,
-                          color: Colors.white,
-                        );
-                      },
-                    ),
-                  ),
-                ),
+                    icon: Icon(
+                      widget.data.liked()
+                          ? Icons.favorite
+                          : Icons.favorite_border,
+                      size: 30,
+                      color: Colors.white,
+                    )),
               ),
             ],
           ),

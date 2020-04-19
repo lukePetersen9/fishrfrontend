@@ -12,6 +12,8 @@ class Post {
     _imagesAndVideos = new List<String>(8);
   }
 
+
+
   void setTitle(String t) {
     _title = t;
   }

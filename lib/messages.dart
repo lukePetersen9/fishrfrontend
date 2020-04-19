@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sample/Models/user.dart';
+
+import 'Models/currentuser.dart';
 
 class Messages extends StatefulWidget {
-  final User data;
+  final CurrentUser data;
   Messages(this.data);
   @override
   _MessagesState createState() => _MessagesState();

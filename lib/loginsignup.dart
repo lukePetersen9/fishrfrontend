@@ -1,8 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:sample/Models/user.dart';
 import 'package:sample/backendServices/Express/databasemethods.dart';
-import 'package:sample/backendServices/Firebase/baseauth.dart';
 import 'package:sample/homepagetabs.dart';
+
+import 'Models/currentuser.dart';
 
 class LoginSignUp extends StatefulWidget {
   LoginSignUp();
@@ -14,14 +15,25 @@ class _LoginSignUpState extends State<LoginSignUp>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
   TextEditingController _username, _password, _email, _first, _last, _phone;
-  AuthService _authService = new AuthService();
   bool show = false;
   String userId = 'hello';
+  FirebaseAuth _auth = FirebaseAuth.instance;
 
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(vsync: this, length: 2);
+
+    _auth.currentUser().then((value) {
+      if (value != null) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => HomePageTabs(CurrentUser.init(value.uid)),
+          ),
+        );
+      }
+    });
+    _tabController = TabController(vsync: this, length: 3);
     _username = TextEditingController();
     _password = TextEditingController();
     _email = TextEditingController();
@@ -44,7 +56,7 @@ class _LoginSignUpState extends State<LoginSignUp>
     return Scaffold(
       backgroundColor: Colors.blue[200],
       body: DefaultTabController(
-        length: 2,
+        length: 3,
         child: TabBarView(
           controller: _tabController,
           children: <Widget>[
@@ -61,7 +73,9 @@ class _LoginSignUpState extends State<LoginSignUp>
                 ),
                 Expanded(
                   child: FlatButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      _tabController.animateTo(2);
+                    },
                     child: Text('Login'),
                   ),
                 ),
@@ -162,15 +176,16 @@ class _LoginSignUpState extends State<LoginSignUp>
                                 setState(() {
                                   show = true;
                                 });
-                                await _authService
-                                    .registerWithEmailAndPassword(
-                                        _email.text, _password.text)
+                                await _auth
+                                    .createUserWithEmailAndPassword(
+                                        email: _email.text,
+                                        password: _password.text)
                                     .then(
                                   (value) async {
                                     if (value != null) {
-                                      User user = User.init(
-                                        _username.text,
-                                        value,
+                                      CurrentUser user = CurrentUser.init(
+                                        value.user.uid,
+                                        username: _username.text,
                                         first: _first.text,
                                         last: _last.text,
                                         phone: _phone.text,
@@ -192,6 +207,93 @@ class _LoginSignUpState extends State<LoginSignUp>
                                     }
                                   },
                                 );
+                              },
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 15, horizontal: 5),
+                            ),
+                            show ? CircularProgressIndicator() : Container(),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Container(
+                height: MediaQuery.of(context).size.height,
+                color: Colors.blue[200],
+                child: Flex(
+                  direction: Axis.vertical,
+                  children: <Widget>[
+                    Expanded(
+                      child: Align(
+                        alignment: Alignment.topLeft,
+                        child: FlatButton(
+                          onPressed: () {
+                            _tabController.animateTo(0);
+                          },
+                          child: Text('back'),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 4,
+                      child: Center(
+                        child: Text('Login'),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: TextField(
+                        controller: _email,
+                        decoration:
+                            InputDecoration.collapsed(hintText: 'email'),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: TextField(
+                        controller: _password,
+                        decoration:
+                            InputDecoration.collapsed(hintText: 'password'),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 4,
+                      child: Center(
+                        child: Column(
+                          children: [
+                            FlatButton(
+                              child: Text('login'),
+                              onPressed: () async {
+                                setState(() {
+                                  show = true;
+                                });
+                                _auth
+                                    .signInWithEmailAndPassword(
+                                        email: _email.text,
+                                        password: _password.text)
+                                    .then((value) {
+                                  setState(() {
+                                    if (value.user.uid == null) {
+                                      setState(() {
+                                        show = false;
+                                      });
+                                    } else {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => HomePageTabs(
+                                              new CurrentUser.init(
+                                                  value.user.uid)),
+                                        ),
+                                      );
+                                    }
+                                  });
+                                });
                               },
                               padding: EdgeInsets.symmetric(
                                   vertical: 15, horizontal: 5),

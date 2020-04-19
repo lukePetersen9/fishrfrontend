@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sample/Models/user.dart';
+import 'package:sample/Models/currentuser.dart';
 import 'package:sample/backendServices/Express/databasemethods.dart';
 
 class UserProfile extends StatefulWidget {
@@ -12,22 +12,22 @@ class UserProfile extends StatefulWidget {
 class _UserProfileState extends State<UserProfile>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
-  User profile;
+  CurrentUser profile;
   bool loaded;
   @override
   void initState() {
     super.initState();
-    profile = User.loading(widget.userID);
+    profile = CurrentUser.init(widget.userID);
     _tabController = TabController(vsync: this, length: 3);
     loaded = false;
-    getUserData(widget.userID).then((value) {
-      if (value != null) {
-        setState(() {
-          profile = value;
-          loaded = true;
-        });
-      }
-    });
+    // getUserData(widget.userID).then((value) {
+    //   print(value);
+    //   if (value != null) {
+    //     setState(() {
+    //       //profile = value;
+    //     });
+    //   }
+    // });
   }
 
   @override
@@ -55,8 +55,8 @@ class _UserProfileState extends State<UserProfile>
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Text(profile.firstName),
-                        Text(profile.lastName),
+                        Text(profile.first),
+                        Text(profile.last),
                         Text(profile.username),
                       ],
                     ),
@@ -69,12 +69,11 @@ class _UserProfileState extends State<UserProfile>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  Text('${profile.followerCount} followers'),
+                  Text('${profile.followersCount} followers'),
                   Text('${profile.followingCount} following'),
                 ],
               ),
             ),
-            
             Expanded(
               flex: 18,
               child: DefaultTabController(

@@ -1,12 +1,11 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:sample/Models/post.dart';
-import 'package:sample/Models/user.dart';
-import 'package:sample/Models/user.dart';
+import 'package:sample/Models/currentuser.dart';
 
 final String url = 'http://18.188.191.226:3000/';
 
-Future<int> makeUser(User user) async {
+Future<int> makeUser(CurrentUser user) async {
   Map<String, String> headers = {
     'Content-Type': 'application/json; charset=UTF-8',
   };
@@ -14,7 +13,7 @@ Future<int> makeUser(User user) async {
     var response = await http.post(
       url + 'makeUser',
       headers: headers,
-      body: json.encode(user),
+      body: json.encode(CurrentUser),
     );
     return response.statusCode;
   } catch (e) {
@@ -22,7 +21,7 @@ Future<int> makeUser(User user) async {
   }
 }
 
-Future<List<User>> searchText(String s) async {
+Future<List<CurrentUser>> searchText(String s) async {
   Map<String, String> headers = {
     'Content-Type': 'application/json; charset=UTF-8',
   };
@@ -31,29 +30,81 @@ Future<List<User>> searchText(String s) async {
       url + 'search/' + s,
       headers: headers,
     );
-    return User().parseUsers(response.body);
+    return CurrentUser().parseUsers(response.body);
   } catch (e) {
     return null;
   }
 }
 
-Future<User> getUserData(String s) async {
+Future<CurrentUser> getUserData(CurrentUser user) async {
   Map<String, String> headers = {
     'Content-Type': 'application/json; charset=UTF-8',
   };
   try {
     var response = await http.get(
-      url + 'user/' + s,
+      url + 'user/' + user.id,
       headers: headers,
     );
-    print(response.body);
-    return User().parseUser(response.body);
+    user.parseUserData(response.body);
+    return user;
   } catch (e) {
+    print(e);
     return null;
   }
 }
 
-Future<List<User>> emptySearchList() async {
+Future<CurrentUser> getPrivatePosts(CurrentUser user) async {
+  Map<String, String> headers = {
+    'Content-Type': 'application/json; charset=UTF-8',
+  };
+  try {
+    var response = await http.get(
+      url + 'privatePosts/' + user.id,
+      headers: headers,
+    );
+    user.parsePrivatePosts(response.body);
+    return user;
+  } catch (e) {
+    print(e);
+    return null;
+  }
+}
+
+Future<CurrentUser> getCompleteUserData(CurrentUser user) async {
+  await getUserData(user).then((value) async {
+    print(value.first);
+    if (value != null) {
+      user = value;
+     await getPrivatePosts(value).then((value) {
+        print(value.privateCards);
+        if (value != null) {
+          print('here');
+          user = value;
+          return user;
+        } else {
+          return null;
+        }
+      });
+    }
+  });
+  return user;
+  // Map<String, String> headers = {
+  //   'Content-Type': 'application/json; charset=UTF-8',
+  // };
+  // try {
+  //   var response = await http.get(
+  //     url + 'fullUserData/' + user.id,
+  //     headers: headers,
+  //   );
+  //   print(response.body);
+  //   user.parseUserData(response.body);
+  //   return 0;
+  // } catch (e) {
+  //   return 404;
+  // }
+}
+
+Future<List<CurrentUser>> emptySearchList() async {
   Map<String, String> headers = {
     'Content-Type': 'application/json; charset=UTF-8',
   };
@@ -62,7 +113,7 @@ Future<List<User>> emptySearchList() async {
       url + 'searchEmpty/',
       headers: headers,
     );
-    return User().parseUsers(response.body);
+    return CurrentUser().parseUsers(response.body);
   } catch (e) {
     return null;
   }

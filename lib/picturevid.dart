@@ -96,7 +96,7 @@ class _PictureVideoState extends State<PictureVideo> {
                   fit: BoxFit.fitWidth,
                   alignment: FractionalOffset.center,
                   image: NetworkImage(
-                    widget.pic,
+                    widget.pic.trim(),
                   ),
                 ),
               ),

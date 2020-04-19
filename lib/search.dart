@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:sample/Models/user.dart';
+import 'package:sample/Models/currentuser.dart';
 import 'package:sample/userprofile.dart';
 import 'backendServices/Express/databasemethods.dart';
 
 class SearchPage extends StatefulWidget {
-  final User data;
+  final CurrentUser data;
   SearchPage(this.data);
   @override
   _SearchPageState createState() => _SearchPageState();
 }
 
 class _SearchPageState extends State<SearchPage> {
-  List<User> searchResults;
+  List<CurrentUser> searchResults;
 
   @override
   void initState() {
     super.initState();
-    searchResults = new List<User>();
+    searchResults = new List<CurrentUser>();
   }
 
   @override
@@ -65,7 +65,7 @@ class _SearchPageState extends State<SearchPage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) =>
-                          UserProfile(searchResults[index].userID),
+                          UserProfile(searchResults[index].id),
                     ),
                   );
                 },
@@ -89,7 +89,7 @@ class _SearchPageState extends State<SearchPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                            '${searchResults[index].firstName} ${searchResults[index].lastName}'),
+                            '${searchResults[index].first} ${searchResults[index].last}'),
                         Text('${searchResults[index].username}'),
                       ],
                     ),
