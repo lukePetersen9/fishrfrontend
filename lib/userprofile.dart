@@ -3,8 +3,8 @@ import 'package:sample/Models/currentuser.dart';
 import 'package:sample/backendServices/Express/databasemethods.dart';
 
 class UserProfile extends StatefulWidget {
-  final String userID;
-  UserProfile(this.userID);
+  final String userID, currentUser;
+  UserProfile(this.currentUser, this.userID);
   @override
   _UserProfileState createState() => _UserProfileState();
 }
@@ -34,66 +34,84 @@ class _UserProfileState extends State<UserProfile>
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Flex(
-          direction: Axis.vertical,
+        child: Stack(
           children: <Widget>[
-            Expanded(
-              flex: 10,
-              child: Flex(
-                direction: Axis.horizontal,
-                children: [
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage(profile.profilePicture),
+            Flex(
+              direction: Axis.vertical,
+              children: <Widget>[
+                Expanded(
+                  flex: 10,
+                  child: Flex(
+                    direction: Axis.horizontal,
+                    children: [
+                      Expanded(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: NetworkImage(profile.profilePicture),
+                            ),
+                          ),
                         ),
                       ),
-                    ),
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text(profile.first),
+                            Text(profile.last),
+                            Text(profile.username),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  Expanded(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Text(profile.first),
-                        Text(profile.last),
-                        Text(profile.username),
+                ),
+                Expanded(
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Text('${profile.followersCount} followers'),
+                      Text('${profile.followingCount} following'),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  flex: 18,
+                  child: DefaultTabController(
+                    length: 3,
+                    child: TabBarView(
+                      controller: _tabController,
+                      children: <Widget>[
+                        Center(
+                          child: Text('posts'),
+                        ),
+                        ListView.builder(
+                          itemCount: profile.repostedCardsListLength,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Text('post');
+                          },
+                        ),
+                        Center(
+                          child: Text('likeposts'),
+                        ),
                       ],
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-            Expanded(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Text('${profile.followersCount} followers'),
-                  Text('${profile.followingCount} following'),
-                ],
-              ),
-            ),
-            Expanded(
-              flex: 18,
-              child: DefaultTabController(
-                length: 3,
-                child: TabBarView(
-                  controller: _tabController,
-                  children: <Widget>[
-                    Center(
-                      child: Text('posts'),
-                    ),
-                    ListView.builder(
-                      itemCount: profile.repostedCardsListLength,
-                      itemBuilder: (BuildContext context, int index) {
-                        return Text('post');
-                      },
-                    ),
-                    Center(
-                      child: Text('likeposts'),
-                    ),
-                  ],
+            Align(
+              alignment: Alignment.bottomRight,
+              child: Material(
+                color: Colors.green,
+                borderRadius: BorderRadius.circular(30),
+                elevation: 10,
+                child: FlatButton(
+                  onPressed: () {
+                    followUnfollowUser(widget.currentUser, widget.userID);
+                  },
+                  child: Text('follow/unfollow'),
                 ),
               ),
             ),

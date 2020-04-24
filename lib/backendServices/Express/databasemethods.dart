@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:sample/Models/post.dart';
 import 'package:sample/Models/currentuser.dart';
 
-final String url = 'http://18.188.191.226:3000/';
+final String url = 'http://ec2-13-58-244-90.us-east-2.compute.amazonaws.com:3000/';
 
 Future<int> makeUser(CurrentUser user) async {
   Map<String, String> headers = {
@@ -13,7 +13,18 @@ Future<int> makeUser(CurrentUser user) async {
     var response = await http.post(
       url + 'makeUser',
       headers: headers,
-      body: json.encode(CurrentUser),
+      body: json.encode(user),
+    );
+    return response.statusCode;
+  } catch (e) {
+    return 1;
+  }
+}
+
+Future<int> followUnfollowUser(String follower, String followed) async {
+  try {
+    var response = await http.post(
+      url + 'follow/' + follower + ' ' + followed,
     );
     return response.statusCode;
   } catch (e) {
@@ -48,7 +59,6 @@ Future<CurrentUser> getUserData(CurrentUser user) async {
     user.parseUserData(response.body);
     return user;
   } catch (e) {
-    print(e);
     return null;
   }
 }
@@ -65,20 +75,16 @@ Future<CurrentUser> getPrivatePosts(CurrentUser user) async {
     user.parsePrivatePosts(response.body);
     return user;
   } catch (e) {
-    print(e);
     return null;
   }
 }
 
 Future<CurrentUser> getCompleteUserData(CurrentUser user) async {
   await getUserData(user).then((value) async {
-    print(value.first);
     if (value != null) {
       user = value;
-     await getPrivatePosts(value).then((value) {
-        print(value.privateCards);
+      await getPrivatePosts(value).then((value) {
         if (value != null) {
-          print('here');
           user = value;
           return user;
         } else {
@@ -88,20 +94,6 @@ Future<CurrentUser> getCompleteUserData(CurrentUser user) async {
     }
   });
   return user;
-  // Map<String, String> headers = {
-  //   'Content-Type': 'application/json; charset=UTF-8',
-  // };
-  // try {
-  //   var response = await http.get(
-  //     url + 'fullUserData/' + user.id,
-  //     headers: headers,
-  //   );
-  //   print(response.body);
-  //   user.parseUserData(response.body);
-  //   return 0;
-  // } catch (e) {
-  //   return 404;
-  // }
 }
 
 Future<List<CurrentUser>> emptySearchList() async {

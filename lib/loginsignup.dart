@@ -22,7 +22,6 @@ class _LoginSignUpState extends State<LoginSignUp>
   @override
   void initState() {
     super.initState();
-
     _auth.currentUser().then((value) {
       if (value != null) {
         Navigator.push(
@@ -176,12 +175,14 @@ class _LoginSignUpState extends State<LoginSignUp>
                                 setState(() {
                                   show = true;
                                 });
+                                print('pressed');
                                 await _auth
                                     .createUserWithEmailAndPassword(
                                         email: _email.text,
                                         password: _password.text)
                                     .then(
                                   (value) async {
+                                    print(value);
                                     if (value != null) {
                                       CurrentUser user = CurrentUser.init(
                                         value.user.uid,
@@ -191,8 +192,10 @@ class _LoginSignUpState extends State<LoginSignUp>
                                         phone: _phone.text,
                                         e: _email.text,
                                       );
+                                      print(user.toJson());
                                       makeUser(user).then(
                                         (value) {
+                                          print(value);
                                           if (value == 200) {
                                             Navigator.push(
                                               context,

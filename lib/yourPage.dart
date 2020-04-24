@@ -7,13 +7,13 @@ class YourPage extends StatelessWidget {
   YourPage(this.data);
   @override
   Widget build(BuildContext context) {
-    print(data.privateCards);
     return Scaffold(
       appBar: AppBar(
         title: Text(data.id),
         automaticallyImplyLeading: false,
       ),
-      body: ListView.builder(
+      body: 
+      ListView.builder(
         itemCount: data.privateCardListLength,
         itemBuilder: (BuildContext context, int index) {
           return CustomCard(data.privateCards[index], data);

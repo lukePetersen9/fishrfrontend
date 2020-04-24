@@ -1,7 +1,5 @@
 import 'dart:convert';
-import 'package:sample/Models/post.dart';
 import 'package:sample/Models/singlecard.dart';
-import 'package:sample/singlepost.dart';
 
 class CurrentUser {
   bool makeUser;
@@ -55,6 +53,7 @@ class CurrentUser {
   //   repostedCards = new List<SingleCard>();
   //   likedCards = new List<SingleCard>();
   // }
+
   factory CurrentUser.fromJsonQuick(Map<String, dynamic> json) {
     return CurrentUser.init(
       json['userkey'] as String,
@@ -95,7 +94,9 @@ class CurrentUser {
         .replaceAll("},{", "<<<%*>>")
         .split("<<<%*>>");
     for (String s in posts) {
+      
       Map<String, dynamic> singlePost = jsonDecode("{" + s + "}");
+      print(singlePost);
       privateCards.add(SingleCard.fromJson(singlePost));
     }
   }

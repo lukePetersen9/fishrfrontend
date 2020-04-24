@@ -21,20 +21,14 @@ class _CustomCardState extends State<CustomCard>
   @override
   void initState() {
     super.initState();
-    _tabController =
-        TabController(vsync: this, length: widget.data.pictures.length);
+    _tabController = TabController(vsync: this, length: ((widget.data.picturesAndVideos.indexOf(null)+1)/2).floor());
     _tabController.addListener(() {
       setState(() {});
     });
-    for (int i = 0; i < widget.data.pictures.length; i++) {
+    for (int i = 0; widget.data.picturesAndVideos[i] != null; i += 2) {
       tabs.add(
-        PictureVideo(
-            widget.data.pictures[i] == null
-                ? 'https://fishr-data.s3.us-east-2.amazonaws.com/posts/1587096465628k4R1DoDP3yWDWsnR9t3z0IWdGJw2'
-                : widget.data.pictures[i],
-            widget.data.videos[i] == null
-                ? 'https://fishr-data.s3.us-east-2.amazonaws.com/posts/1587100559921MHW7F2eDo7SoP21fiq7X7ThpSTq2.MOV'
-                : widget.data.videos[i]),
+        PictureVideo(widget.data.picturesAndVideos[i],
+            widget.data.picturesAndVideos[i + 1]),
       );
     }
   }
@@ -55,7 +49,7 @@ class _CustomCardState extends State<CustomCard>
           child: Stack(
             children: <Widget>[
               DefaultTabController(
-                length: widget.data.pictures.length,
+                length: 2,
                 child: TabBarView(controller: _tabController, children: tabs),
               ),
               Indicator(

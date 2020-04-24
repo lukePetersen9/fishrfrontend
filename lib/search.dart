@@ -65,7 +65,7 @@ class _SearchPageState extends State<SearchPage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) =>
-                          UserProfile(searchResults[index].id),
+                          UserProfile(widget.data.id, searchResults[index].id),
                     ),
                   );
                 },

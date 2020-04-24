@@ -61,8 +61,8 @@ class SingleCard {
     return _likedBy.contains(uid);
   }
 
-  List<String> get pictures {
-    return _imagesAndVideos.sublist(0, 4);
+  List<String> get picturesAndVideos {
+    return _imagesAndVideos;
   }
 
   List<String> get videos {

@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sample/backendServices/Express/databasemethods.dart';
+import 'package:sample/loginsignup.dart';
 import 'package:sample/makepost.dart';
 import 'package:sample/messages.dart';
 import 'package:sample/publicpage.dart';
@@ -25,9 +27,7 @@ class _HomePageTabsState extends State<HomePageTabs>
   void initState() {
     super.initState();
     _user = CurrentUser.init(widget.user.id);
-    print('before' + _user.first);
     getCompleteUserData(_user).then((value) {
-      print('bafter' + value.first);
       if (value != null) {
         setState(() {});
       }
@@ -43,7 +43,7 @@ class _HomePageTabsState extends State<HomePageTabs>
 
   @override
   Widget build(BuildContext context) {
-    print(_user.privateCards);
+    print('sdfs');
     return DefaultTabController(
       length: 4,
       child: WillPopScope(
@@ -91,7 +91,7 @@ class _HomePageTabsState extends State<HomePageTabs>
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => UserProfile(widget.user.id),
+                        builder: (context) => UserProfile(widget.user.id, null),
                       ),
                     );
                   },
@@ -100,6 +100,19 @@ class _HomePageTabsState extends State<HomePageTabs>
                 FlatButton(
                   onPressed: () {},
                   child: Text('Settings'),
+                ),
+                FlatButton(
+                  onPressed: () {
+                    FirebaseAuth.instance.signOut().then((value) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => LoginSignUp(),
+                        ),
+                      );
+                    });
+                  },
+                  child: Text('Log Out'),
                 ),
               ],
             ),
